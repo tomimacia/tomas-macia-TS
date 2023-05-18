@@ -28,7 +28,7 @@ const DisplayLogos = ({
           {language === "English" ? englishTitle : spanishTitle}
         </Heading>
       </motion.div>
-      <Flex gap={5} p={2} wrap="wrap">
+      <Flex gap={5} p={2} wrap="wrap" >
         {logos.map((logo, i) => {
           return (
             <motion.div
@@ -38,8 +38,8 @@ const DisplayLogos = ({
               transition={{ delay: (i + startingTime + 1) * 0.2 }}
             >
               <Image
-                h={[45, 50, 50, 55]}
-                w={[45, 50, 50, 55]}
+                h={[45, 50, 50, 59]}
+                w={[45, 50, 50, 59]}
                 title={logo.alt.split("-")[0]}
                 objectFit="contain"
                 objectPosition="center"
