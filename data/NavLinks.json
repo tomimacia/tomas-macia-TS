@@ -1,0 +1,47 @@
+{
+  "English": {
+    "Links": [
+      {
+        "Title": "Home",
+        "href": "/"
+      },
+      {
+        "Title": "Skills",
+        "href": "/Skills"
+      },
+      {
+        "Title": "Projects",
+        "href": "/Projects"
+      }
+    ],
+    "Source": {
+        "Title": "Source",      
+        "target": "blank",
+        "rel": "noreferrer noopener",
+        "href": "https://github.com/tomimacia/tomas-macia"
+      }
+  },
+
+  "Español": {
+    "Links": [
+      {
+        "Title": "Inicio",
+        "href": "/"
+      },
+      {
+        "Title": "Skills",
+        "href": "/Skills"
+      },
+      {
+        "Title": "Proyectos",
+        "href": "/Projects"
+      }
+    ],
+    "Source": {
+      "Title": "Fuente",      
+      "target": "blank",
+      "rel": "noreferrer noopener",
+      "href": "https://github.com/tomimacia/tomas-macia"
+    }
+  }
+}

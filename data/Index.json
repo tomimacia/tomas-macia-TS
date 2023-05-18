@@ -1,0 +1,29 @@
+{
+  "English": {
+    "Heading": "More about Tomás",
+    "Description": [
+      "Tomás is a full-stack React developer based in Buenos Aires, Argentina.",
+      "He is 28 years old, he is passionate about web development and enjoys working with HTML, CSS, and JavaScript to create dynamic and engaging web applications.",
+      "In addition, he possesses a solid understanding of React, Next.js, node.js, Chakra UI, Framer Motion and Firebase.",
+      "He strives to stay up-to-date with the latest technologies and trends in web development, and he is always looking for opportunities to expand his skillset.",
+      "Aside from his primary stack, he also has some knowledge of Python, Selenium, Ubuntu, SQLite and Docker.",
+      "He is a quick learner and enjoys taking on new challenges to expand his knowledge and abilities.",
+      "He is excited to be a part of the web development community, and he looks forward to use his skills to create meaningful and impactful projects.",
+      "Thank you for taking the time visiting his portfolio, and please feel free to reach him out if you have any questions or opportunities you would like to discuss."
+    ]
+  },
+
+  "Español": {
+    "Heading": "Más sobre Tomás",
+    "Description": [
+      "Tomás es un desarrollador full-stack de React con sede en Buenos Aires, Argentina.",
+      "Él tiene 28 años, es un apasionado por el desarrollo web y disfruta trabajando con HTML, CSS y JavaScript para crear aplicaciones web dinámicas e interesantes.",
+      "Además, también Posee un sólido conocimiento de React, Next.js, node.js, Chakra UI, Framer Motion y Firebase.",
+      "Se esfuerza por mantenerse actualizado con las últimas tecnologías y tendencias en el desarrollo web, y siempre está buscando oportunidades para expandir su conjunto de habilidades.",
+      "Además de su conjunto de herramientas principal, también tiene algún conocimiento de Python, Selenium, SQLite, Ubuntu y Docker.",
+      "Es un aprendiz rápido y disfruta asumir nuevos desafíos para expandir su conocimiento y habilidades.",
+      "Está emocionado de ser parte de la comunidad de desarrollo web, y espera utilizar sus habilidades para crear proyectos significativos e impactantes.",
+      "Gracias por tomarse el tiempo de visitar su portafolio, y no dude en contactarlo si tiene alguna pregunta u oportunidad que le gustaría discutir."
+    ]
+  }
+}

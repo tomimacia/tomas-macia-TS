@@ -1,0 +1,68 @@
+{
+  "English": {
+    "Title": "Some of my projects:",
+    "ProjectCardsData": [
+      {
+        "alt": "marketplace-pinar-website",
+        "title": "Marketplace Pinar",
+        "description": "Marketplace built with next.js, Chakra UI and Framer Motion. Using Firebase's storage, firestore and google auth.",
+        "source": {
+          "href": "https://github.com/tomimacia/marketplace-pinar",
+          "button": "View source"
+        },
+        "site": {
+          "href": "https://marketplace-pinar.vercel.app/",
+          "button": "Visit site"
+        },
+        "tecs": ["Next.js", "ChakraUI", "Framer Motion", "Firebase"]
+      },
+      {
+        "title": "Quiz Games",
+        "alt": "quiz-website",
+        "description": "Games website, built with next.js, Chakra UI and Framer Motion. Also styled with nes.css library and fetching the-trivia-api ",
+        "source": {
+          "href": "https://github.com/tomimacia/quiz-games",
+          "button": "View source"
+        },
+        "site": {
+          "href": "https://quiz-games-pink.vercel.app/",
+          "button": "Visit site"
+        },
+        "tecs": ["Next.js", "ChakraUI", "Framer Motion", "Nes.css"]
+      }
+    ]
+  },
+  "Español": {
+    "Title": "Algunos de mis proyectos:",
+    "ProjectCardsData": [
+      {
+        "alt": "marketplace-pinar-website",
+        "title": "Marketplace Pinar",
+        "description": "Marketplace desarrollado con next.js, Chakra UI y Framer Motion. Utilizando el storage, firestore y Google Auth de Firebase.",
+        "source": {
+          "href": "https://github.com/tomimacia/marketplace-pinar",
+          "button": "Ver fuente"
+        },
+        "site": {
+          "href": "https://marketplace-pinar.vercel.app/",
+          "button": "Ir al sitio"
+        },
+        "tecs": ["Next.js", "Chakra UI", "Framer Motion", "Firebase"]
+      },
+      {
+        "title": "Quiz Games",
+        "alt": "quiz-website",
+        "description": "Web de juegos, desarrollado con next.js, Chakra UI y Framer Motion. Usando tambien los estilos de la libreria nes.css and utilando la API the-trivia-api ",
+        "source": {
+          "href": "https://github.com/tomimacia/quiz-games",
+          "button": "Ver fuente"
+        },
+        "site": {
+          "href": "https://quiz-games-pink.vercel.app/",
+          "button": "Ir al sitio"
+        },
+        "tecs": ["Next.js", "Chakra UI", "Framer Motion", "Nes.css"]
+      }
+    ]
+  }
+}
