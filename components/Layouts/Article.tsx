@@ -2,19 +2,26 @@ import { Container, Heading } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import { ReactNode } from "react";
-type ArticleLayoutType ={
-  children: ReactNode,
-  headTitle?: string,
-  pageTitle?:string
-}
-const Layout = ({ children, headTitle, pageTitle }:ArticleLayoutType) => {
+type ArticleLayoutType = {
+  children: ReactNode;
+  headTitle?: string;
+  pageTitle?: string;
+};
+const variants = {
+  hidden: { zIndex: 0, x: 0, opacity: 0 },
+  visible: { zIndex: 0, x: 0, opacity: 1 },
+  exit: { zIndex: 1, x: -0, opacity: 0 },
+};
+const Layout = ({ children, headTitle, pageTitle }: ArticleLayoutType) => {
   const t = `${headTitle} - Tomás Macía`;
   return (
-    <motion.article      
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ type: "tween", duration: 0.5 }}
+    <motion.article
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      variants={variants}
+      transition={{ duration: 0.4, type: "tween" }}
+      style={{ position: "relative" }}
     >
       {headTitle && (
         <Head>

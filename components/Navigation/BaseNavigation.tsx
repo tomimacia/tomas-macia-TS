@@ -4,8 +4,9 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   useColorModeValue,
+  Link
 } from "@chakra-ui/react";
-import Link from "next/link";
+import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { IoLogoGithub } from "react-icons/io5";
 
@@ -22,24 +23,25 @@ export const BaseNavigation = ({ data }: NavigationChild) => {
     >
       {data?.Links?.map((link) => {
         const { Title, href } = link;
-        const isActive = href === router.asPath;
+        const isActive = href === router.route;
         return (
           <BreadcrumbItem key={"BaseLink" + Title}>
-            <BreadcrumbLink
-              as={Link}
+            <Link
+              as={NextLink}
+              scroll={false}
               href={href}
               p="2.5px"
               borderRadius="5px"
               bg={isActive ? bgCustomColor : undefined}
             >
               {Title}
-            </BreadcrumbLink>
+            </Link>
           </BreadcrumbItem>
         );
       })}
       <BreadcrumbItem>
-        <BreadcrumbLink
-          as={Link}
+        <Link
+          as={NextLink}
           href={data?.Source?.href}
           target={data?.Source?.target}
           rel={data?.Source?.rel}
@@ -49,7 +51,7 @@ export const BaseNavigation = ({ data }: NavigationChild) => {
         >
           <IoLogoGithub />
           {data?.Source?.Title}
-        </BreadcrumbLink>
+        </Link>
       </BreadcrumbItem>
     </Breadcrumb>
   );
