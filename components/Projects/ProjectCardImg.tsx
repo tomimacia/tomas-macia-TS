@@ -101,7 +101,7 @@ export const ProjectCardImg = ({ alt, onOpen, src, tecs }:ProjectCardImgType) =>
         />
       </ChakraBox>
       <UnorderedList style={{ listStyleType: "none" }} h="100%">
-        {tecs.map((tec, index:number) => {
+        {tecs.map((tec, index) => {
           return (
             <ChakraBox key={tec} custom={index} variants={listMotion}>
               <ListItem fontWeight="medium" fontSize={17}>

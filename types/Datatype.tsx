@@ -1,3 +1,8 @@
+export type IndexDataType = {
+  Heading?: string;
+  Description?: string[]
+};
+
 export type LinkType = {
   Title: string;
   href: string;
@@ -9,9 +14,9 @@ type SourceType = {
   href: string;
 };
 export type NavigationChild = {
-  data: NavigationDataType
+  data: NavigationDataType;
 };
-export type NavigationDataType ={
+export type NavigationDataType = {
   Links?: LinkType[];
   Source?: SourceType;
 };

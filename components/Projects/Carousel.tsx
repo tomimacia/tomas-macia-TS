@@ -5,7 +5,7 @@ import { CarouselArrow } from "./CarouselArrow";
 import { CarouselType, DirectionType } from "@/types/ProjectsTypes";
 
 const variants = {
-  enter: (direction:DirectionType) => ({
+  enter: (direction: DirectionType) => ({
     x: direction > 0 ? 1000 : -1000,
     opacity: 0,
   }),
@@ -26,13 +26,13 @@ const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
 
-const Carousel = ({ imgs }:CarouselType) => {
+const Carousel = ({ imgs }: CarouselType) => {
   const [[page, direction], setPage] = useState([0, 0]);
   const ChakraImg = chakra(motion.img, {
     shouldForwardProp: (prop) =>
       isValidMotionProp(prop) || shouldForwardProp(prop),
-  });  
-  const paginate = (newDirection:DirectionType) => {
+  });
+  const paginate = (newDirection: DirectionType) => {
     const newPage = page + newDirection;
     let final = 0;
     if (newPage > imgs.length - 1) {
@@ -62,14 +62,13 @@ const Carousel = ({ imgs }:CarouselType) => {
           animate="center"
           exit="exit"
           transition={{
-             type: "tween",                    
+            type: "tween",
           }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={1}
           onDragEnd={(e, { offset, velocity }) => {
             const swipe = swipePower(offset.x, velocity.x);
-
             if (swipe < -swipeConfidenceThreshold) {
               paginate(1);
             } else if (swipe > swipeConfidenceThreshold) {

@@ -3,8 +3,9 @@ import IndexData from "../data/Index.json";
 import useJsonData from "../hooks/useJsonData";
 import DescriptionProfile from "../public/images/ProfileImages/DescriptionProfile.png";
 import Layout from "../components/Layouts/Article";
+import { IndexDataType } from "@/types/Datatype";
 export default function Home() {
-  const data = useJsonData(IndexData);
+  const data: IndexDataType = useJsonData(IndexData);
   return (
     <Layout pageTitle={data?.Heading}>
       <Flex
@@ -26,7 +27,7 @@ export default function Home() {
             src={DescriptionProfile.src}
           />
           <Text p={1} borderRadius="5px" fontSize={["sm", "md", "md", "lg"]}>
-            {data.Description.map((line:string[], i: number) => {
+            {data.Description?.map((line, i) => {
               return (
                 <span key={"Line" + i}>
                   {line}
