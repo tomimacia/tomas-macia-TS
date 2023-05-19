@@ -24,7 +24,7 @@ const Layout = ({ children }: MainLayoutType) => {
         <link rel="icon" href={HeaderLogo.src} />
       </Head>
       <Navigation />
-      <Container h="100%" pb="4rem" pt="35px" maxW="container.md">
+      <Container overflow='hidden' h="100%" pb="4rem" pt="35px" maxW="container.md">
         <NavTitle />
         <Divider maxW="90%" m="auto" mb={6} mt={5} orientation="horizontal" />
         {children}
