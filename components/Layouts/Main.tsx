@@ -22,7 +22,6 @@ const Layout = ({ children }: MainLayoutType) => {
         <meta name="og:title" content="Tomas Macia" />
         <meta property="og:type" content="website" />
         <link rel="icon" href={HeaderLogo.src} />
-        <title>Tomas Macia - Homepage</title>
       </Head>
       <Navigation />
       <Container h="100%" pb="4rem" pt="35px" maxW="container.md">

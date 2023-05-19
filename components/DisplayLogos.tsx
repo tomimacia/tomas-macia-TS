@@ -1,18 +1,8 @@
 import { DisplayLogosType } from "@/types/Skills";
-import {
-  Flex,
-  Heading,
-  Image,
-  chakra,
-  shouldForwardProp,
-} from "@chakra-ui/react";
-import { isValidMotionProp, motion } from "framer-motion";
+import { Flex, Heading, useBreakpointValue } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import Image from "next/image";
 import { useLanguage } from "../context/languageContext";
-
-const ChakraImg = chakra(motion.img, {
-  shouldForwardProp: (prop) =>
-    isValidMotionProp(prop) || shouldForwardProp(prop),
-});
 
 const DisplayLogos = ({
   logos,
@@ -20,6 +10,7 @@ const DisplayLogos = ({
   spanishTitle,
   startingTime = 0,
 }: DisplayLogosType) => {
+  const sizeValue = useBreakpointValue([45, 50, 50, 59]);
   const language = useLanguage();
   return (
     <Flex
@@ -42,19 +33,22 @@ const DisplayLogos = ({
       <Flex gap={5} p={2} wrap="wrap">
         {logos.map((logo, i) => {
           return (
-            <ChakraImg
+            <motion.div
               key={i}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: `${(i + startingTime + 1) * 0.2}` }}
-              h={[45, 50, 50, 59]}
-              w={[45, 50, 50, 59]}
-              title={logo.alt.split("-")[0]}
-              objectFit="contain"
-              objectPosition="center"
-              alt={logo.alt}
-              src={logo.imageProps.src}
-            />
+              transition={{ delay: (i + startingTime + 1) * 0.2 }}
+            >
+              <Flex justifyContent="center" alignItems="center" h="100%">
+                <Image
+                  height={sizeValue}
+                  width={sizeValue}
+                  title={logo.alt.split("-")[0]}
+                  alt={logo.alt}
+                  src={logo.imageProps.src}
+                />
+              </Flex>
+            </motion.div>
           );
         })}
       </Flex>

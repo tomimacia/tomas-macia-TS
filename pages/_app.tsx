@@ -5,15 +5,12 @@ import { AnimatePresence } from "framer-motion";
 
 import type { AppProps } from "next/app";
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <ChakraProvider theme={customTheme}>
       <Layout>
-        <AnimatePresence
-          mode="wait"
-          initial={true}          
-        >
-          <Component {...pageProps} />
+        <AnimatePresence mode="wait" initial={true}>
+          <Component {...pageProps} key={router.route} />
         </AnimatePresence>
       </Layout>
     </ChakraProvider>
