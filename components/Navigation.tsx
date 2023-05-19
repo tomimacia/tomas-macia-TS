@@ -13,6 +13,7 @@ const Navigation = () => {
       as="nav"
       h="60px"
       bg="blackAlpha.200"
+      zIndex={10}
       top={0}
       position="fixed"
       w="100%"
