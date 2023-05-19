@@ -1,21 +1,14 @@
 import { NavigationChild } from "@/types/Datatype";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  useColorModeValue,
-  Link
-} from "@chakra-ui/react";
-import NextLink from "next/link";
+import { Flex, HStack } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { IoLogoGithub } from "react-icons/io5";
+import { LinkItem } from "./LinkItem";
 
 export const BaseNavigation = ({ data }: NavigationChild) => {
-  const bgCustomColor = useColorModeValue("teal.200", "teal");
   const router = useRouter();
+
   return (
-    <Breadcrumb
-      separator=""
+    <HStack
       display={{ base: "none", sm: "flex", md: "flex" }}
       mr={3}
       fontSize={18}
@@ -23,36 +16,23 @@ export const BaseNavigation = ({ data }: NavigationChild) => {
     >
       {data?.Links?.map((link) => {
         const { Title, href } = link;
-        const isActive = href === router.route;
+        const active = href === router.route;
         return (
-          <BreadcrumbItem key={"BaseLink" + Title}>
-            <Link
-              as={NextLink}
-              scroll={false}
-              href={href}
-              p="2.5px"
-              borderRadius="5px"
-              bg={isActive ? bgCustomColor : undefined}
-            >
-              {Title}
-            </Link>
-          </BreadcrumbItem>
+          <LinkItem active={active} href={href} key={"BaseLink" + Title}>
+            {Title}
+          </LinkItem>
         );
       })}
-      <BreadcrumbItem>
-        <Link
-          as={NextLink}
-          href={data?.Source?.href}
-          target={data?.Source?.target}
-          rel={data?.Source?.rel}
-          display="inline-flex"
-          alignItems="center"
-          style={{ gap: 4 }}
-        >
+      <LinkItem
+        href={data?.Source?.href}
+        target={data?.Source?.target}
+        rel={data?.Source?.rel}
+      >
+        <Flex align="center" gap={2}>
           <IoLogoGithub />
           {data?.Source?.Title}
-        </Link>
-      </BreadcrumbItem>
-    </Breadcrumb>
+        </Flex>
+      </LinkItem>
+    </HStack>
   );
 };
