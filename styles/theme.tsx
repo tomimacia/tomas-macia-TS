@@ -1,15 +1,15 @@
 import { extendTheme } from "@chakra-ui/react";
 import { theme as chakraTheme } from "@chakra-ui/react";
-import '@fontsource/montserrat/400.css'
+import "@fontsource/montserrat/400.css";
 const fonts = {
   ...chakraTheme.fonts,
   body: "montserrat",
   heading: "montserrat",
 };
 const config = {
-  initialColorMode: 'dark',
-  useSystemColorMode: true
-}
+  initialColorMode: "dark",
+  useSystemColorMode: true,
+};
 const breakpoints = {
   sm: "40em",
   md: "52em",
@@ -38,8 +38,8 @@ const overrides = {
   fonts,
   breakpoints,
   fontWeights,
-  fontSizes,  
-  config
+  fontSizes,
+  config,
 };
 
 export const customTheme = extendTheme(overrides);

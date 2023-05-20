@@ -1,7 +1,8 @@
+import { useSetIsPresent } from "@/context/articleContext";
 import { Container, Heading } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { motion, useIsPresent } from "framer-motion";
 import Head from "next/head";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 type ArticleLayoutType = {
   children: ReactNode;
   headTitle: string;
@@ -14,6 +15,11 @@ const variants = {
 };
 const Layout = ({ children, headTitle, pageTitle }: ArticleLayoutType) => {
   const t = `${headTitle} - Tomás Macía`;
+  const setIsPresent = useSetIsPresent();
+  const isPresent = useIsPresent();
+  useEffect(() => {
+    setIsPresent(isPresent);
+  }, [isPresent, setIsPresent]);
   return (
     <motion.article
       initial="hidden"

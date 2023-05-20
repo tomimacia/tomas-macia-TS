@@ -1,4 +1,4 @@
-import { Box, Container, Divider } from "@chakra-ui/react";
+import { Box, Container, Divider, useColorModeValue } from "@chakra-ui/react";
 import Head from "next/head";
 import HeaderLogo from "../../public/logos/HeaderLogo.png";
 import Footer from "../Footer";
@@ -10,7 +10,7 @@ type MainLayoutType = {
 };
 const Layout = ({ children }: MainLayoutType) => {
   return (
-    <Box pos="relative" minH="100vh" h="100%" as="main">
+    <Box pos="relative" minH="100vh" bg={useColorModeValue("#D6CEAE","gray.800")} h="100%" as="main">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Tomas Macia's homepage" />

@@ -43,6 +43,7 @@ const DisplayLogos = ({
                 <Image
                   height={sizeValue}
                   width={sizeValue}
+                  style={{width:"auto"}}
                   title={logo.alt.split("-")[0]}
                   alt={logo.alt}
                   src={logo.imageProps.src}

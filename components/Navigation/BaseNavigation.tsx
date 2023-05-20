@@ -1,12 +1,10 @@
 import { NavigationChild } from "@/types/Datatype";
 import { Flex, HStack } from "@chakra-ui/react";
-import { useRouter } from "next/router";
 import { IoLogoGithub } from "react-icons/io5";
 import { LinkItem } from "./LinkItem";
+import { LinkPush } from "./LinkPush";
 
 export const BaseNavigation = ({ data }: NavigationChild) => {
-  const router = useRouter();
-
   return (
     <HStack
       display={{ base: "none", sm: "flex", md: "flex" }}
@@ -16,11 +14,11 @@ export const BaseNavigation = ({ data }: NavigationChild) => {
     >
       {data?.Links?.map((link) => {
         const { Title, href } = link;
-        const active = href === router.route;
+
         return (
-          <LinkItem active={active} href={href} key={"BaseLink" + Title}>
+          <LinkPush href={href} key={"BaseLink" + Title}>
             {Title}
-          </LinkItem>
+          </LinkPush>
         );
       })}
       <LinkItem
