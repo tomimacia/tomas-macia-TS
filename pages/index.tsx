@@ -7,7 +7,7 @@ import { IndexDataType } from "@/types/Datatype";
 export default function Home() {
   const data: IndexDataType = useJsonData(IndexData);
   return (
-    <Layout pageTitle={data?.Heading} headTitle="Tomas Macia - Homepage">
+    <Layout pageTitle={data?.Heading} headTitle="Homepage">
       <Flex
         mt={4}
         p={2}
