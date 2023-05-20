@@ -58,6 +58,8 @@ const Carousel = ({ imgs }: CarouselType) => {
           objectPosition="top"
           custom={direction}
           variants={variants}
+          cursor='grab'
+          whileTap={{cursor:"grabbing"}}          
           initial="enter"
           animate="center"
           exit="exit"
