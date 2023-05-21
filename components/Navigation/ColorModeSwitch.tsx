@@ -10,6 +10,7 @@ const ColorModeSwitch = () => {
       animate={{ scale: [1, 1.1, 1.3, 1.1, 1] }}
       transition={{ type: "tween" }}
       key={colorMode}
+      style={{marginRight:5}}      
     >
       <IconButton
         aria-label="switch-icon"

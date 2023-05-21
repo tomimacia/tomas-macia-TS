@@ -10,7 +10,13 @@ type MainLayoutType = {
 };
 const Layout = ({ children }: MainLayoutType) => {
   return (
-    <Box pos="relative" minH="100vh" bg={useColorModeValue("#D6CEAE","gray.800")} h="100%" as="main">
+    <Box
+      pos="relative"
+      minH="100vh"
+      bg={useColorModeValue("#D6CEAE", "gray.800")}
+      h="100%"
+      as="main"
+    >
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Tomas Macia's homepage" />
@@ -24,7 +30,13 @@ const Layout = ({ children }: MainLayoutType) => {
         <link rel="icon" href={HeaderLogo.src} />
       </Head>
       <Navigation />
-      <Container overflow='hidden' h="100%" pb="4rem" pt="35px" maxW="container.md">
+      <Container
+        overflow="hidden"
+        h="100%"
+        pb="4rem"
+        pt="35px"
+        maxW="container.md"
+      >
         <NavTitle />
         <Divider maxW="90%" m="auto" mb={6} mt={5} orientation="horizontal" />
         {children}
