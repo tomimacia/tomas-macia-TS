@@ -40,7 +40,7 @@ const DisplayLogos = ({
               transition={{ delay: (i + startingTime + 1) * 0.2 }}
             >
               <Flex justifyContent="center" alignItems="center" h="100%">
-                <Image
+                <Image                  
                   height={sizeValue}
                   width={sizeValue}                                               
                   title={logo.alt.split("-")[0]}
