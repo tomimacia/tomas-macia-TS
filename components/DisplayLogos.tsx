@@ -42,8 +42,7 @@ const DisplayLogos = ({
               <Flex justifyContent="center" alignItems="center" h="100%">
                 <Image
                   height={sizeValue}
-                  width={sizeValue}
-                  style={{width:"auto"}}
+                  width={sizeValue}                                               
                   title={logo.alt.split("-")[0]}
                   alt={logo.alt}
                   src={logo.imageProps.src}
