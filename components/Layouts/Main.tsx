@@ -19,14 +19,14 @@ const Layout = ({ children }: MainLayoutType) => {
     >
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Tomas Macia's homepage" />
+        <meta name="description" content="Tomas Macia homepage portfolio" />
         <meta name="author" content="Tomas Macia" />
         <meta name="twitter:title" content="Tomas Macia" />
         <meta name="twitter:site" content="@tomimacia" />
         <meta name="twitter:creator" content="@tomimacia" />
         <meta property="og:site_name" content="Tomas Macia" />
         <meta name="og:title" content="Tomas Macia" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="website homepage" />
         <link rel="icon" href={HeaderLogo.src} />
       </Head>
       <Navigation />
