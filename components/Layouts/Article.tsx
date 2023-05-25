@@ -38,7 +38,7 @@ const Layout = ({ children, headTitle, pageTitle }: ArticleLayoutType) => {
           </Head>
         )}
 
-        <Heading size="lg" pb={1}>
+        <Heading as="h1" size="lg" pb={1}>
           {pageTitle}
         </Heading>
         {children}
