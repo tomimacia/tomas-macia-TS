@@ -21,7 +21,7 @@ export default function Home() {
             borderRadius="15%"
             display="block"
             float="right"
-            alt="profile-img"
+            alt="Tomás-Macía-profile"
             h={["200px", "250px", "300px", "350px"]}
             maxH={["200px", "300px", "350px", "400px"]}
             src={DescriptionProfile.src}
