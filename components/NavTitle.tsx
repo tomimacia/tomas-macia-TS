@@ -6,7 +6,9 @@ const NavTitle = () => {
     <Container mt={5} p={3}>
       <Flex justify="space-between">
         <Box>
-          <Heading w="100%">Tomás Macía</Heading>
+          <Heading as="h1" w="100%">
+            Tomás Macía
+          </Heading>
           <Text w="100%" fontSize="lg" fontWeight="bold">
             Full-stack React developer
           </Text>
