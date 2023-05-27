@@ -32,7 +32,7 @@ const NotFound = () => {
         <Button
           as={NextLink}
           href="/"
-          colorScheme={useColorModeValue("teal", "blue.400")}
+          bg={useColorModeValue("teal", "blue.400")}
         >
           {data.back}
         </Button>
