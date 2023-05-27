@@ -27,6 +27,10 @@ const Layout = ({ children }: MainLayoutType) => {
         <meta property="og:site_name" content="Tomas Macia" />
         <meta name="og:title" content="Tomas Macia" />
         <meta property="og:type" content="website homepage" />
+        <link
+          href="https://tomasmacia.com.ar/favicon.ico"
+          rel="apple-touch-icon"
+        />
         <link rel="icon" href={HeaderLogo.src} />
       </Head>
       <Navigation />
