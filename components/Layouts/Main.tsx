@@ -26,6 +26,7 @@ const Layout = ({ children }: MainLayoutType) => {
         <meta name="twitter:creator" content="@tomimacia" />
         <meta property="og:site_name" content="Tomas Macia" />
         <meta name="og:title" content="Tomas Macia" />
+        <meta name="google-site-verification" content="48E8wrz8ZLqrjJDfbW7r6B5wugEeAxmDtusOPT-xGQE" />
         <meta property="og:type" content="website homepage" />
         <link
           href="https://tomasmacia.com.ar/favicon.ico"
