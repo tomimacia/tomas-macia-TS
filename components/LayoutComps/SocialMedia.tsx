@@ -44,6 +44,7 @@ export const SocialMedia = () => {
                 >
                   <MediaIcon
                     title={title}
+                    fontSize={18}
                     color={
                       title === "LinkedIn" ? iconColor[colorMode] : undefined
                     }
@@ -64,6 +65,7 @@ export const SocialMedia = () => {
                 target="_blank"
               >
                 <data.MediaIcon
+                  fontSize={18}
                   style={{ color: data.iconColor[colorMode] }}
                   title={data.title}
                   cursor="pointer"
