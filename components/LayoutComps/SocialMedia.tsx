@@ -1,5 +1,11 @@
 import { useLanguage } from "@/context/languageContext";
-import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Flex,
+  Icon,
+  Text,
+  useBreakpointValue,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
@@ -14,10 +20,11 @@ export const SocialMedia = () => {
   const language = useLanguage();
   const colorMode = useColorModeValue(0, 1);
   const baseColor = useColorModeValue("#aaa", "#fff");
+  const iconSizes = useBreakpointValue([15, 17, 18, 19]);
   return (
     <Flex gap={3} flexDir="column">
       <Flex mt={2} w="100%" align="center" justify="space-between">
-        <Flex gap={[4, 5, 6, 7]}>
+        <Flex gap={[3.5, 5, 6, 7]}>
           {SocialMediaData.map((media) => {
             const { href, iconColor, title, MediaIcon } = media;
             return (
@@ -44,7 +51,7 @@ export const SocialMedia = () => {
                 >
                   <MediaIcon
                     title={title}
-                    fontSize={18}
+                    fontSize={iconSizes}
                     color={
                       title === "LinkedIn" ? iconColor[colorMode] : undefined
                     }
@@ -55,25 +62,26 @@ export const SocialMedia = () => {
             );
           })}
         </Flex>
-        <Flex align="center" gap={4}>
+        <Flex align="center" gap={[2, 2.5, 3, 4]}>
           {ContactData.map((data) => {
+            const { href, MediaIcon, title, iconColor } = data;
             return (
               <Link
-                href={data.href}
-                key={data.href}
+                href={href}
+                key={href}
                 rel="noreferred noopener"
                 target="_blank"
               >
-                <data.MediaIcon
-                  fontSize={18}
-                  style={{ color: data.iconColor[colorMode] }}
-                  title={data.title}
+                <MediaIcon
+                  fontSize={iconSizes}
+                  style={{ color: iconColor[colorMode] }}
+                  title={title}
                   cursor="pointer"
                 />
               </Link>
             );
           })}
-          <Text>{ContactText[language]}</Text>
+          <Text fontSize={{ base: 13, md: 18 }}>{ContactText[language]}</Text>
         </Flex>
       </Flex>
       <Flex>
