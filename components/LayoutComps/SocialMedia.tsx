@@ -87,17 +87,18 @@ export const SocialMedia = () => {
       <Flex>
         <Typewriter
           onInit={(typewriter) => {
+            const PAUSE_TIME = 2100
             typewriter
               .typeString("instagram")
-              .pauseFor(2500)
+              .pauseFor(PAUSE_TIME)
               .deleteAll()
               .callFunction(() => setCurrentType("Github"))
               .typeString("github")
-              .pauseFor(2500)
+              .pauseFor(PAUSE_TIME)
               .deleteAll()
               .callFunction(() => setCurrentType("Twitter"))
               .typeString("twitter")
-              .pauseFor(2500)
+              .pauseFor(PAUSE_TIME)
               .deleteAll()
               .callFunction(() => setCurrentType("Instagram"))
               .start();
