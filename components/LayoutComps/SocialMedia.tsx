@@ -37,7 +37,7 @@ export const SocialMedia = () => {
                           : baseColor,
                       boxShadow:
                         currentType === title
-                          ? `0 0 10px ${iconColor[colorMode]}`
+                          ? `0 0 15px ${iconColor[colorMode]}`
                           : `0 0 0px ${iconColor[colorMode]}`,
                     }
                   }
