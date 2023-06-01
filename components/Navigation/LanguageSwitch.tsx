@@ -1,5 +1,12 @@
 import { useLanguage, useSetlanguage } from "@/context/languageContext";
-import { FormControl, FormLabel, Switch, Text } from "@chakra-ui/react";
+import {
+  FormControl,
+  FormLabel,
+  Icon,
+  Switch,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import { MdLanguage } from "react-icons/md";
 export const LanguageSwitch = () => {
   const language = useLanguage();
   const setLanguage = useSetlanguage();
@@ -8,9 +15,12 @@ export const LanguageSwitch = () => {
   };
   return (
     <FormControl alignItems="center" display="flex" gap={1}>
-      <Text fontSize="lg" mr={3}>
-        Lan
-      </Text>
+      <Icon
+        as={MdLanguage}
+        color={useColorModeValue("blackAlpha.600", "gray.400")}
+        fontSize="lg"
+      />
+
       <FormLabel fontSize="18px" m={0}>
         En
       </FormLabel>

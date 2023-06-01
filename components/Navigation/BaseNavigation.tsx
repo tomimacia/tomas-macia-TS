@@ -1,6 +1,6 @@
 import { NavigationChild } from "@/types/Datatype";
 import { Flex, HStack } from "@chakra-ui/react";
-import { IoLogoGithub } from "react-icons/io5";
+import { IoLogoGithub } from "react-icons/io";
 import { LinkItem } from "./LinkItem";
 import { LinkPush } from "./LinkPush";
 
