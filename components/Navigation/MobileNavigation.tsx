@@ -25,7 +25,7 @@ export const MobileNavigation = ({ data }: NavigationChild) => {
             fontSize={18}
             outlineColor={useColorModeValue("blackAlpha.400", "gray.400")}
             size="sm"
-            bg='transparent'
+            bg="transparent"
             icon={<HamburgerIcon />}
           />
           <MenuList>
