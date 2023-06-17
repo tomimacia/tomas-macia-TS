@@ -19,7 +19,7 @@ const Layout = ({ children }: MainLayoutType) => {
     >
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Tomas Macia homepage portfolio" />
+        <meta name="description" content="Tomas Macia Portfolio" />
         <meta name="author" content="Tomas Macia" />
         <meta name="twitter:title" content="Tomas Macia" />
         <meta name="twitter:site" content="@tomimacia" />
