@@ -106,7 +106,7 @@ export const SocialMedia = () => {
 
           <span>.com/tomimacia</span>
         </Flex>
-        <Link href="/TomasMaciaCv.pdf">
+        <Link target='_blank' rel='noreferrer noopener' href="/TomasMaciaCv.pdf">
           <Flex gap={1} align="center">
             <BsFiletypePdf color={useColorModeValue("red", "white")} />
             CV
