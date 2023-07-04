@@ -10,7 +10,7 @@ export const ModalFooterButtons = ({ project }:ModalFooterButtonsType) => {
         <Button
           size={["xs", "xs", "sm", "sm"]}
           as={Link}
-          target="blank"
+          target="_blank"
           rel="noreferred noopener"
           href={project.source.href}
         >
@@ -21,7 +21,7 @@ export const ModalFooterButtons = ({ project }:ModalFooterButtonsType) => {
           _hover={{ bg: "blue.200" }}
           size={["xs", "xs", "sm", "sm"]}
           as={Link}
-          target="blank"
+          target="_blank"
           rel="noreferred noopener"
           href={project.site.href}
         >
