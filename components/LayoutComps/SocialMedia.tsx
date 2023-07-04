@@ -1,6 +1,8 @@
 import { useLanguage } from "@/context/languageContext";
 import {
   Flex,
+  Icon,
+  Image,
   Text,
   useBreakpointValue,
   useColorModeValue,
@@ -14,14 +16,13 @@ import {
   ContactText,
   SocialMediaData,
 } from "../../data/SocialMediaData";
-
+import { BsFiletypePdf } from "react-icons/bs";
 export const SocialMedia = () => {
   const [currentType, setCurrentType] = useState("Instagram");
   const language = useLanguage();
   const colorMode = useColorModeValue(0, 1);
   const baseColor = useColorModeValue("#aaa", "#ccc");
   const iconSizes = useBreakpointValue([15, 17, 18, 19]);
-
   return (
     <Flex gap={3} flexDir="column">
       <Flex mt={2} w="100%" align="center" justify="space-between">
@@ -42,7 +43,7 @@ export const SocialMedia = () => {
                 rel="noreferred noopener"
                 target="_blank"
               >
-                <motion.div style={{ borderRadius: "50%"}} animate={animation}>
+                <motion.div style={{ borderRadius: "50%" }} animate={animation}>
                   <MediaIcon
                     title={title}
                     fontSize={iconSizes}
@@ -78,31 +79,39 @@ export const SocialMedia = () => {
           <Text fontSize={{ base: 13, md: 18 }}>{ContactText[language]}</Text>
         </Flex>
       </Flex>
-      <Flex>
-        <Typewriter
-          onInit={(typewriter) => {
-            const PAUSE_TIME = 2100;
-            typewriter
-              .typeString("instagram")
-              .pauseFor(PAUSE_TIME)
-              .deleteAll()
-              .callFunction(() => setCurrentType("Github"))
-              .typeString("github")
-              .pauseFor(PAUSE_TIME)
-              .deleteAll()
-              .callFunction(() => setCurrentType("Twitter"))
-              .typeString("twitter")
-              .pauseFor(PAUSE_TIME)
-              .deleteAll()
-              .callFunction(() => setCurrentType("Instagram"))
-              .start();
-          }}
-          options={{
-            loop: true,
-          }}
-        />
+      <Flex justify="space-between">
+        <Flex>
+          <Typewriter
+            onInit={(typewriter) => {
+              const PAUSE_TIME = 2100;
+              typewriter
+                .typeString("instagram")
+                .pauseFor(PAUSE_TIME)
+                .deleteAll()
+                .callFunction(() => setCurrentType("Github"))
+                .typeString("github")
+                .pauseFor(PAUSE_TIME)
+                .deleteAll()
+                .callFunction(() => setCurrentType("Twitter"))
+                .typeString("twitter")
+                .pauseFor(PAUSE_TIME)
+                .deleteAll()
+                .callFunction(() => setCurrentType("Instagram"))
+                .start();
+            }}
+            options={{
+              loop: true,
+            }}
+          />
 
-        <span>.com/tomimacia</span>
+          <span>.com/tomimacia</span>
+        </Flex>
+        <Link href="/TomasMaciaCv.pdf">
+          <Flex gap={1} align="center">
+            <BsFiletypePdf color={useColorModeValue("red", "white")} />
+            CV
+          </Flex>
+        </Link>
       </Flex>
     </Flex>
   );

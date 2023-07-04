@@ -27,7 +27,7 @@ const Layout = ({ children }: MainLayoutType) => {
         <meta property="og:site_name" content="Tomas Macia" />
         <meta name="og:title" content="Tomas Macia" />
         <meta name="google-site-verification" content="48E8wrz8ZLqrjJDfbW7r6B5wugEeAxmDtusOPT-xGQE" />
-        <meta property="og:type" content="website homepage" />
+        <meta property="og:type" content="Website Homepage" />
         <link
           href="https://tomasmacia.com.ar/favicon.ico"
           rel="apple-touch-icon"
