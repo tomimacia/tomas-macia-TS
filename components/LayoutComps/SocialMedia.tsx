@@ -31,10 +31,9 @@ export const SocialMedia = () => {
             const { href, iconColor, title, MediaIcon } = media;
             const animation = title !== "LinkedIn" && {
               color: currentType === title ? iconColor[colorMode] : baseColor,
-              boxShadow:
-                currentType === title
-                  ? `0 0 15px ${iconColor[colorMode]}`
-                  : `0 0 0px ${iconColor[colorMode]}`,
+              boxShadow: `0 0 ${currentType === title ? "15px" : "0px"} ${
+                iconColor[colorMode]
+              }`,
             };
             return (
               <Link
@@ -43,7 +42,15 @@ export const SocialMedia = () => {
                 rel="noreferred noopener"
                 target="_blank"
               >
-                <motion.div style={{ borderRadius: "50%" }} animate={animation}>
+                <motion.div
+                  style={{ borderRadius: "50%" }}
+                  whileHover={{
+                    scale: 1.1,
+                    color: iconColor[colorMode],
+                    boxShadow: `0 0 15px ${iconColor[colorMode]}`,
+                  }}
+                  animate={animation}
+                >
                   <MediaIcon
                     title={title}
                     fontSize={iconSizes}
@@ -61,19 +68,24 @@ export const SocialMedia = () => {
           {ContactData.map((data) => {
             const { href, MediaIcon, title, iconColor } = data;
             return (
-              <Link
-                href={href}
+              <motion.div
+                style={{ borderRadius: "50%" }}
                 key={href}
-                rel="noreferred noopener"
-                target="_blank"
+                whileHover={{
+                  scale: 1.1,
+                  color: iconColor[colorMode],
+                  boxShadow: `0 0 15px ${iconColor[colorMode]}`,
+                }}
               >
-                <MediaIcon
-                  fontSize={iconSizes}
-                  style={{ color: iconColor[colorMode] }}
-                  title={title}
-                  cursor="pointer"
-                />
-              </Link>
+                <Link href={href} rel="noreferred noopener" target="_blank">
+                  <MediaIcon
+                    fontSize={iconSizes}
+                    style={{ color: iconColor[colorMode] }}
+                    title={title}
+                    cursor="pointer"
+                  />
+                </Link>
+              </motion.div>
             );
           })}
           <Text fontSize={{ base: 13, md: 18 }}>{ContactText[language]}</Text>
@@ -106,8 +118,12 @@ export const SocialMedia = () => {
 
           <span>.com/tomimacia</span>
         </Flex>
-        <Link target='_blank' rel='noreferrer noopener' href="/TomasMaciaCv.pdf">
-          <Flex gap={1} align="center">
+        <Link
+          target="_blank"
+          rel="noreferrer noopener"
+          href="/TomasMaciaCv.pdf"
+        >
+          <Flex border='1px solid transparent' p={1.5} borderRadius='8%' _hover={{fontWeight:"bold",border:"1px solid white"}} gap={1} align="center">
             <BsFiletypePdf color={useColorModeValue("red", "white")} />
             CV
           </Flex>
