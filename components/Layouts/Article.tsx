@@ -14,7 +14,7 @@ const variants = {
   exit: { zIndex: 1, x: 20, opacity: 0 },
 };
 const Layout = ({ children, headTitle, pageTitle }: ArticleLayoutType) => {
-  const t = `${headTitle} - Tomás Macía`;
+  const t = `Tomás Macía - ${headTitle}`;
   const setIsPresent = useSetIsPresent();
   const isPresent = useIsPresent();
   useEffect(() => {
@@ -34,11 +34,11 @@ const Layout = ({ children, headTitle, pageTitle }: ArticleLayoutType) => {
           <Head>
             <title>{t}</title>
             <meta name="twitter:title" content={t} />
-            <meta property="og:title" content={t} />
+            <meta property="og:title" content="Tomás Macía - Portfolio" />
           </Head>
         )}
 
-        <Heading as='h1' size="lg" pb={1}>
+        <Heading as="h1" size="lg" pb={1}>
           {pageTitle}
         </Heading>
         {children}
