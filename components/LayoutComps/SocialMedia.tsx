@@ -1,8 +1,11 @@
 import { useLanguage } from "@/context/languageContext";
 import {
+  Button,
   Flex,
-  Icon,
-  Image,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
   Text,
   useBreakpointValue,
   useColorModeValue,
@@ -10,13 +13,14 @@ import {
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { BsFiletypePdf } from "react-icons/bs";
 import Typewriter from "typewriter-effect";
 import {
   ContactData,
   ContactText,
   SocialMediaData,
 } from "../../data/SocialMediaData";
-import { BsFiletypePdf } from "react-icons/bs";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 export const SocialMedia = () => {
   const [currentType, setCurrentType] = useState("Instagram");
   const language = useLanguage();
@@ -118,16 +122,32 @@ export const SocialMedia = () => {
 
           <span>.com/tomimacia</span>
         </Flex>
-        <Link
-          target="_blank"
-          rel="noreferrer noopener"
-          href="/CVTomasMacia_EN.pdf"
-        >
-          <Flex border='1px solid transparent' p={1.5} borderRadius='8%' _hover={{fontWeight:"bold",border:"1px solid white"}} gap={1} align="center">
-            <BsFiletypePdf color={useColorModeValue("red", "white")} />
-            CV
-          </Flex>
-        </Link>
+        <Menu>
+          <MenuButton as={Button} p={2} rightIcon={<ChevronDownIcon />}>
+            <Flex align='center' gap={1}>
+              <BsFiletypePdf color={useColorModeValue("red", "white")} />
+              CV
+            </Flex>
+          </MenuButton>
+          <MenuList>
+            <MenuItem
+              as={Link}
+              target="_blank"
+              rel="noreferrer noopener"
+              href="/CVTomasMacia_ES.pdf"
+            >
+              Español
+            </MenuItem>
+            <MenuItem
+              as={Link}
+              target="_blank"
+              rel="noreferrer noopener"
+              href="/CVTomasMacia_EN.pdf"
+            >
+              English
+            </MenuItem>
+          </MenuList>
+        </Menu>
       </Flex>
     </Flex>
   );
