@@ -1,11 +1,6 @@
 import { useLanguage } from "@/context/languageContext";
 import {
-  Button,
   Flex,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
   Text,
   useBreakpointValue,
   useColorModeValue,
@@ -13,27 +8,26 @@ import {
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { BsFiletypePdf } from "react-icons/bs";
-import Typewriter from "typewriter-effect";
 import {
   ContactData,
   ContactText,
   SocialMediaData,
 } from "../../data/SocialMediaData";
-import { ChevronDownIcon } from "@chakra-ui/icons";
+import TypeWriterComponent from "./TypeWriterComponent";
 export const SocialMedia = () => {
   const [currentType, setCurrentType] = useState("Instagram");
   const language = useLanguage();
   const colorMode = useColorModeValue(0, 1);
   const baseColor = useColorModeValue("#aaa", "#ccc");
   const iconSizes = useBreakpointValue([15, 17, 18, 19]);
+
   return (
     <Flex gap={3} flexDir="column">
       <Flex mt={2} w="100%" align="center" justify="space-between">
         <Flex gap={[3.5, 5, 6, 7]}>
           {SocialMediaData.map((media) => {
             const { href, iconColor, title, MediaIcon } = media;
-            const animation = title !== "LinkedIn" && {
+            const animation = {
               color: currentType === title ? iconColor[colorMode] : baseColor,
               boxShadow: `0 0 ${currentType === title ? "15px" : "0px"} ${
                 iconColor[colorMode]
@@ -58,9 +52,6 @@ export const SocialMedia = () => {
                   <MediaIcon
                     title={title}
                     fontSize={iconSizes}
-                    color={
-                      title === "LinkedIn" ? iconColor[colorMode] : undefined
-                    }
                     cursor="Pointer"
                   />
                 </motion.div>
@@ -95,60 +86,10 @@ export const SocialMedia = () => {
           <Text fontSize={{ base: 13, md: 18 }}>{ContactText[language]}</Text>
         </Flex>
       </Flex>
-      <Flex justify="space-between">
-        <Flex>
-          <Typewriter
-            onInit={(typewriter) => {
-              const PAUSE_TIME = 2100;
-              typewriter
-                .typeString("instagram")
-                .pauseFor(PAUSE_TIME)
-                .deleteAll()
-                .callFunction(() => setCurrentType("Github"))
-                .typeString("github")
-                .pauseFor(PAUSE_TIME)
-                .deleteAll()
-                .callFunction(() => setCurrentType("Twitter"))
-                .typeString("twitter")
-                .pauseFor(PAUSE_TIME)
-                .deleteAll()
-                .callFunction(() => setCurrentType("Instagram"))
-                .start();
-            }}
-            options={{
-              loop: true,
-            }}
-          />
-
-          <span>.com/tomimacia</span>
-        </Flex>
-        <Menu>
-          <MenuButton as={Button} p={2} rightIcon={<ChevronDownIcon />}>
-            <Flex align='center' gap={1}>
-              <BsFiletypePdf color={useColorModeValue("red", "white")} />
-              CV
-            </Flex>
-          </MenuButton>
-          <MenuList>
-            <MenuItem
-              as={Link}
-              target="_blank"
-              rel="noreferrer noopener"
-              href="/CVTomasMacia_ES.pdf"
-            >
-              Español
-            </MenuItem>
-            <MenuItem
-              as={Link}
-              target="_blank"
-              rel="noreferrer noopener"
-              href="/CVTomasMacia_EN.pdf"
-            >
-              English
-            </MenuItem>
-          </MenuList>
-        </Menu>
-      </Flex>
+      <TypeWriterComponent
+        currentType={currentType}
+        setCurrentType={setCurrentType}
+      />
     </Flex>
   );
 };
