@@ -3,10 +3,9 @@ import {
   BsGithub,
   BsInstagram,
   BsLinkedin,
-  BsTwitter,
   BsWhatsapp,
 } from "react-icons/bs";
-
+import { RiTwitterXLine } from "react-icons/ri";
 export const SocialMediaData = [
   {
     href: "https://www.instagram.com/tomimacia",
@@ -23,8 +22,8 @@ export const SocialMediaData = [
   {
     href: "https://www.twitter.com/tomimacia",
     title: "Twitter",
-    iconColor: ["#00acee", "#00acee"],
-    MediaIcon: BsTwitter,
+    iconColor: ["#171515", "#00acee"],
+    MediaIcon: RiTwitterXLine,
   },
   {
     href: "https://www.linkedin.com/in/tomas-eduardo-macia/",
