@@ -121,7 +121,7 @@ export const SocialMedia = () => {
         <Link
           target="_blank"
           rel="noreferrer noopener"
-          href="/TomasMaciaCv.pdf"
+          href="/CVTomasMacia_EN.pdf"
         >
           <Flex border='1px solid transparent' p={1.5} borderRadius='8%' _hover={{fontWeight:"bold",border:"1px solid white"}} gap={1} align="center">
             <BsFiletypePdf color={useColorModeValue("red", "white")} />
