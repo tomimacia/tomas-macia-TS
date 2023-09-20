@@ -15,9 +15,16 @@ import { BsFiletypePdf } from "react-icons/bs";
 const CvComponent = () => {
   return (
     <Menu>
-      <MenuButton as={Button} p={2} rightIcon={<ChevronDownIcon />}>
+      <MenuButton
+        bg="transparent"
+        as={Button}
+        _hover={{ bg: undefined, border: `1.5px solid ${useColorModeValue("black","white")}` }}
+        border="1.5px solid transparent"
+        p={2}
+        rightIcon={<ChevronDownIcon />}
+      >
         <Flex align="center" gap={1}>
-          <BsFiletypePdf color={useColorModeValue("red", "white")} />
+          <BsFiletypePdf />
           CV
         </Flex>
       </MenuButton>
