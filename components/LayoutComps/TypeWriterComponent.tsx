@@ -14,9 +14,9 @@ const TypeWriterComponent = ({
     hidden: { y: 20, opacity: 0 },
     visible: { y: 0, opacity: 1 },
     exit: { y: 20, opacity: 0 },
-  };
+  };  
   return (
-    <Flex justify="space-between">
+    <Flex w="100%" flexDir={["column","row","row","row"]} justify="space-between">
       <Flex>
         <Typewriter
           onInit={(typewriter) => {
@@ -58,7 +58,9 @@ const TypeWriterComponent = ({
           </motion.div>
         </AnimatePresence>
       </Flex>
-      <CvComponent />
+      <Flex justify="flex-end">
+        <CvComponent />
+      </Flex>
     </Flex>
   );
 };
