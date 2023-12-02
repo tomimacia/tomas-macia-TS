@@ -5,6 +5,7 @@ import Footer from "../Footer";
 import NavTitle from "../NavTitle";
 import Navigation from "../Navigation";
 import { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/react";
 type MainLayoutType = {
   children: ReactNode;
 };
@@ -26,7 +27,10 @@ const Layout = ({ children }: MainLayoutType) => {
         <meta name="twitter:creator" content="@tomimacia" />
         <meta property="og:site_name" content="Tomas Macia" />
         <meta name="og:title" content="Tomas Macia" />
-        <meta name="google-site-verification" content="48E8wrz8ZLqrjJDfbW7r6B5wugEeAxmDtusOPT-xGQE" />
+        <meta
+          name="google-site-verification"
+          content="48E8wrz8ZLqrjJDfbW7r6B5wugEeAxmDtusOPT-xGQE"
+        />
         <meta property="og:type" content="Website Homepage" />
         <link
           href="https://tomasmacia.com.ar/favicon.ico"
@@ -45,6 +49,7 @@ const Layout = ({ children }: MainLayoutType) => {
         <NavTitle />
         <Divider maxW="90%" m="auto" mb={6} mt={5} orientation="horizontal" />
         {children}
+        <Analytics />
       </Container>
       <Footer />
     </Box>
