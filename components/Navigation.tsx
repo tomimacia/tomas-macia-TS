@@ -17,6 +17,7 @@ const Navigation = () => {
       top={0}
       position="fixed"
       w="100%"
+      pr="calc(100vw - 100%)"
       style={{ backdropFilter: "blur(10px)" }}
     >
       <Container

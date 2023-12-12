@@ -1,4 +1,10 @@
-import { Box, Container, Divider, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Divider,
+  calc,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Head from "next/head";
 import HeaderLogo from "../../public/logos/HeaderLogo.png";
 import Footer from "../Footer";
@@ -17,6 +23,8 @@ const Layout = ({ children }: MainLayoutType) => {
       bg={useColorModeValue("#D6CEAE", "gray.800")}
       h="100%"
       as="main"
+      pl="calc(100vw - 100%)"
+      overflowX='hidden'
     >
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
