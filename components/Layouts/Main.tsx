@@ -1,17 +1,12 @@
-import {
-  Box,
-  Container,
-  Divider,
-  calc,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Container, Divider, useColorModeValue } from "@chakra-ui/react";
+import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
+import { ReactNode } from "react";
 import HeaderLogo from "../../public/logos/HeaderLogo.png";
 import Footer from "../Footer";
 import NavTitle from "../NavTitle";
 import Navigation from "../Navigation";
-import { ReactNode } from "react";
-import { Analytics } from "@vercel/analytics/react";
+import DescriptionProfile from "@/public/images/ProfileImages/DescriptionProfile.png";
 type MainLayoutType = {
   children: ReactNode;
 };
@@ -24,7 +19,7 @@ const Layout = ({ children }: MainLayoutType) => {
       h="100%"
       as="main"
       pl="calc(100vw - 100%)"
-      overflowX='hidden'
+      overflowX="hidden"
     >
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,6 +30,11 @@ const Layout = ({ children }: MainLayoutType) => {
         <meta name="twitter:creator" content="@tomimacia" />
         <meta property="og:site_name" content="Tomas Macia" />
         <meta name="og:title" content="Tomas Macia" />
+        <meta property="og:image:type" content="image/jpeg"></meta>
+        <meta
+          property="og:image"
+          content="/images/ProfileImages/DescriptionProfile.png"
+        />
         <meta
           name="google-site-verification"
           content="48E8wrz8ZLqrjJDfbW7r6B5wugEeAxmDtusOPT-xGQE"
