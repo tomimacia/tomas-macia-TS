@@ -23,14 +23,14 @@ const Layout = ({ children }: MainLayoutType) => {
     >
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Tomas Macia Portfolio" />
+        <meta name="description" content="Tomas Macia is a React & Next JS developer" />
         <meta name="author" content="Tomas Macia" />
         <meta name="twitter:title" content="Tomas Macia" />
         <meta name="twitter:site" content="@tomimacia" />
         <meta name="twitter:creator" content="@tomimacia" />
         <meta
           name="twitter:image"
-          content="/images/ProfileImages/DescriptionProfile.png"
+          content="/images/ProfileImages/DescriptionProfileOG.png"
         />
 
         <meta property="og:site_name" content="Tomas Macia" />
@@ -38,7 +38,7 @@ const Layout = ({ children }: MainLayoutType) => {
         <meta property="og:image:type" content="image/jpeg"></meta>
         <meta
           property="og:image"
-          content="/images/ProfileImages/DescriptionProfile.png"
+          content="/images/ProfileImages/DescriptionProfileOG.png"
         />
         <meta
           name="google-site-verification"
