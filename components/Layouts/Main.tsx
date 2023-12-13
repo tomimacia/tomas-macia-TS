@@ -28,6 +28,11 @@ const Layout = ({ children }: MainLayoutType) => {
         <meta name="twitter:title" content="Tomas Macia" />
         <meta name="twitter:site" content="@tomimacia" />
         <meta name="twitter:creator" content="@tomimacia" />
+        <meta
+          name="twitter:image"
+          content="/images/ProfileImages/DescriptionProfile.png"
+        />
+
         <meta property="og:site_name" content="Tomas Macia" />
         <meta name="og:title" content="Tomas Macia" />
         <meta property="og:image:type" content="image/jpeg"></meta>
