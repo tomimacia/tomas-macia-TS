@@ -4,7 +4,7 @@ import ProjectsCard from "../components/Projects/ProjectsCard";
 import { MainImages, ModalImages } from "../data/ProjectImages";
 import ProjectsJson from "../data/Projects.json";
 import useJsonData from "../hooks/useJsonData";
-
+import { motion } from "framer-motion";
 const Projects = () => {
   const data: ProjectsDataType = useJsonData(ProjectsJson);
 
@@ -12,12 +12,18 @@ const Projects = () => {
     <Layout headTitle="Projects" pageTitle={data.Title}>
       {data.ProjectCardsData?.map((project: FullProjectType, i: number) => {
         return (
-          <ProjectsCard          
+          <motion.div
             key={project.alt}
-            img={MainImages[i].src}
-            modalImages={ModalImages[i]}
-            project={project}
-          />
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{ duration: 1, delay: i * 0.5 }}
+          >
+            <ProjectsCard
+              img={MainImages[i].src}
+              modalImages={ModalImages[i]}
+              project={project}
+            />
+          </motion.div>
         );
       })}
     </Layout>

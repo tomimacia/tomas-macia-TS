@@ -10,16 +10,20 @@
         "href": "/Skills"
       },
       {
+        "Title": "Work",
+        "href": "/Work"
+      },
+      {
         "Title": "Projects",
         "href": "/Projects"
       }
     ],
     "Source": {
-        "Title": "Source",      
-        "target": "blank",
-        "rel": "noreferrer noopener",
-        "href": "https://github.com/tomimacia/tomas-macia-TS"
-      }
+      "Title": "Source",
+      "target": "blank",
+      "rel": "noreferrer noopener",
+      "href": "https://github.com/tomimacia/tomas-macia-TS"
+    }
   },
 
   "Español": {
@@ -33,12 +37,16 @@
         "href": "/Skills"
       },
       {
+        "Title": "Trabajos",
+        "href": "/Work"
+      },
+      {
         "Title": "Proyectos",
         "href": "/Projects"
       }
     ],
     "Source": {
-      "Title": "Fuente",      
+      "Title": "Fuente",
       "target": "blank",
       "rel": "noreferrer noopener",
       "href": "https://github.com/tomimacia/tomas-macia"

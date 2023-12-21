@@ -10,7 +10,7 @@ export const BaseNavigation = ({ data }: NavigationChild) => {
       display={{ base: "none", sm: "flex", md: "flex" }}
       mr={3}
       fontSize={18}
-      spacing={4}
+      spacing={3}
     >
       {data?.Links?.map((link) => {
         const { Title, href } = link;

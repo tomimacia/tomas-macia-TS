@@ -3,6 +3,34 @@
     "Title": "Some of my projects:",
     "ProjectCardsData": [
       {
+        "alt": "tuithub-news-website",
+        "title": "TuitHub Trending News",
+        "description": "Twitter trending news website. It uses a backend that scraps the current twitter trends, gets the most recent news urls from google (on its location zone), grabs the article and rewrites it entirely with AI. The backend is built on node.js with puppeteer, and the front-end with Next JS and Chakra UI",
+        "source": {
+          "href": "private",
+          "button": "Private source"
+        },
+        "site": {
+          "href": "https://www.tuithub.com/",
+          "button": "Visit site"
+        },
+        "tecs": ["Next.js", "ChakraUI", "Framer Motion", "Puppeteer"]
+      },
+      {
+        "alt": "radiotracker-pinar-website",
+        "title": "RadioTracker APRS",
+        "description": "Geolocation and weather site powered by APRS. Built with Chakra UI and Next JS, consuming APRS Api",
+        "source": {
+          "href": "private",
+          "button": "Private source"
+        },
+        "site": {
+          "href": "https://www.radiotracker.ar/",
+          "button": "Visit site"
+        },
+        "tecs": ["Next.js", "ChakraUI", "Framer Motion", "Firebase"]
+      },
+      {
         "alt": "marketplace-pinar-website",
         "title": "Marketplace Pinar",
         "description": "Marketplace built with next.js, Chakra UI and Framer Motion. Using Firebase's storage, firestore and google auth.",
@@ -35,6 +63,34 @@
   "Español": {
     "Title": "Algunos de mis proyectos:",
     "ProjectCardsData": [
+      {
+        "alt": "tuithub-news-website",
+        "title": "TuitHub Trending News",
+        "description": "Página web de noticias de tendencias en Twitter. Utiliza un backend que extrae las tendencias actuales de Twitter, obtiene las URL de noticias más recientes de Google (en su zona de ubicación), captura el artículo y lo reescribe completamente con inteligencia artificial. El backend está desarrollado con Node.js y Puppeteer, y el frontend con Next.js y Chakra UI.",
+        "source": {
+          "href": "private",
+          "button": "Fuente privada"
+        },
+        "site": {
+          "href": "https://www.tuithub.com/",
+          "button": "Ir al sitio"
+        },
+        "tecs": ["Next.js", "ChakraUI", "Framer Motion", "Puppeteer"]
+      },
+      {
+        "alt": "radiotracker-pinar-website",
+        "title": "RadioTracker APRS",
+        "description": "Sitio de geolocalización y clima alimentado por APRS. Desarrollado con Chakra UI y Next JS, consumiendo la API de APRS.",
+        "source": {
+          "href": "private",
+          "button": "Fuente privada"
+        },
+        "site": {
+          "href": "https://www.radiotracker.ar/",
+          "button": "Ir al sitio"
+        },
+        "tecs": ["Next.js", "ChakraUI", "Framer Motion", "Firebase"]
+      },
       {
         "alt": "marketplace-pinar-website",
         "title": "Marketplace Pinar",

@@ -2,8 +2,9 @@ import { ModalFooterButtonsType } from "@/types/ProjectsTypes";
 import { Button, Flex, ModalFooter } from "@chakra-ui/react";
 import Link from "next/link";
 
-
-export const ModalFooterButtons = ({ project }:ModalFooterButtonsType) => {
+export const ModalFooterButtons = ({ project }: ModalFooterButtonsType) => {
+  const { source, site } = project;
+  const isPrivate = source.href === "private";
   return (
     <ModalFooter>
       <Flex gap={3}>
@@ -12,9 +13,12 @@ export const ModalFooterButtons = ({ project }:ModalFooterButtonsType) => {
           as={Link}
           target="_blank"
           rel="noreferred noopener"
-          href={project.source.href}
+          href={source.href}
+          _hover={!isPrivate ? { bg: "gray.300" } : undefined}
+          isDisabled={isPrivate}
+          pointerEvents={isPrivate ? "none" : undefined}
         >
-          {project.source.button}
+          {source.button}
         </Button>
         <Button
           bg="blue.400"
@@ -23,9 +27,9 @@ export const ModalFooterButtons = ({ project }:ModalFooterButtonsType) => {
           as={Link}
           target="_blank"
           rel="noreferred noopener"
-          href={project.site.href}
+          href={site.href}
         >
-          {project.site.button}
+          {site.button}
         </Button>
       </Flex>
     </ModalFooter>
