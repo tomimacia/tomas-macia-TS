@@ -54,9 +54,10 @@ const WorkCard = ({
         bg="blackAlpha.50"
         borderRadius="10px"
       >
-        <Text fontSize={["sm", "sm", "md", "md"]} p={1}
-          dangerouslySetInnerHTML={{__html:description}}
-          
+        <Text
+          fontSize={["sm", "sm", "md", "md"]}
+          p={1}
+          dangerouslySetInnerHTML={{ __html: description }}
         />
         <Button
           bg="blue.400"
@@ -67,6 +68,7 @@ const WorkCard = ({
           _hover={{ bg: "blue.200" }}
           target="_blank"
           rel="noreferred noopener"
+          my={2}
         >
           {buttonText}
         </Button>

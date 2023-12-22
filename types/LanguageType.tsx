@@ -1,4 +1,4 @@
-type LanguageStateType = "English" | "Español";
+export type LanguageStateType = "English" | "Español";
 
 export type LanguageContexType = {
   language: LanguageStateType;
