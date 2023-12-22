@@ -6,7 +6,6 @@ import HeaderLogo from "../../public/logos/HeaderLogo.png";
 import Footer from "../Footer";
 import NavTitle from "../NavTitle";
 import Navigation from "../Navigation";
-import DescriptionProfile from "@/public/images/ProfileImages/DescriptionProfile.png";
 type MainLayoutType = {
   children: ReactNode;
 };

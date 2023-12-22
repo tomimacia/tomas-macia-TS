@@ -15,9 +15,10 @@ const Navigation = () => {
       bg="blackAlpha.200"
       zIndex={10}
       top={0}
+      left={0}
       position="fixed"
       w="100%"
-      pr="calc(100vw - 100%)"
+      pl="calc(100vw - 100%)"
       style={{ backdropFilter: "blur(10px)" }}
     >
       <Container
