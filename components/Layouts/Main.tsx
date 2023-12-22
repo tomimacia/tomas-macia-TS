@@ -17,7 +17,7 @@ const Layout = ({ children }: MainLayoutType) => {
       bg={useColorModeValue("#D6CEAE", "gray.800")}
       h="100%"
       as="main"
-      pl="calc(100vw - 100%)"
+      pl={{ xl: "calc(100vw - 100%)" }}
       overflowX="hidden"
     >
       <Head>
