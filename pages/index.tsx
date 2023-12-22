@@ -18,7 +18,7 @@ export default function Home() {
         <Box>
           <Image
             p={1}
-            borderRadius="15%"
+            borderRadius="5%"
             display="block"
             float="right"
             alt="Tomás-Macía-profile"
