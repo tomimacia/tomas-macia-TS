@@ -10,7 +10,7 @@ const NavTitle = () => {
             Tomás Macía
           </Heading>
           <Text w="100%" fontSize="lg" fontWeight="bold">
-            Full-stack React developer
+            Full-stack React & Node developer
           </Text>
         </Box>
         <Image
