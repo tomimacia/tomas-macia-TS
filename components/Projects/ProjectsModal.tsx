@@ -6,10 +6,10 @@ import {
   ModalContent,
   ModalOverlay,
   Text,
-} from "@chakra-ui/react";
-import Carousel from "./Carousel";
-import { ModalFooterButtons } from "./ModalFooterButtons";
-import { ProjectsModalType } from "@/types/ProjectsTypes";
+} from '@chakra-ui/react';
+import Carousel from './carousel/Carousel';
+import { ModalFooterButtons } from './ModalFooterButtons';
+import { ProjectsModalType } from '@/types/ProjectsTypes';
 
 export const ProjectsModal = ({
   isOpen,
@@ -19,7 +19,7 @@ export const ProjectsModal = ({
 }: ProjectsModalType) => {
   return (
     <Modal
-      size={["xl", "2xl", "3xl", "3xl"]}
+      size={['xl', '2xl', '3xl', '3xl']}
       isCentered
       blockScrollOnMount={false}
       isOpen={isOpen}
@@ -27,14 +27,12 @@ export const ProjectsModal = ({
     >
       <ModalOverlay />
       <ModalContent>
-        <ModalCloseButton zIndex={10} bg="blackAlpha.600" />
+        <ModalCloseButton zIndex={10} bg='blackAlpha.600' />
         <ModalBody>
-          <Carousel imgs={imgs} />
-
-          <Heading pt={3} pb={3} fontSize="3xl">
-            {project.title}
-          </Heading>
-          <Text>{project.description}</Text>
+          <ModalBody>
+            <Carousel title={project.title} images={imgs.map((i) => i.src)} />
+            <Text py={3}>{project.description}</Text>
+          </ModalBody>
         </ModalBody>
 
         <ModalFooterButtons project={project} />
