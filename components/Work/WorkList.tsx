@@ -4,6 +4,7 @@ import WorkCard from './WorkCard';
 import EspacioSanMartinIMG from '@/public/images/Work/EspacioSanMartin.jpg';
 import CarniceriasManzo from '@/public/images/Work/CarnieceriasManzo.png';
 import ConsultorioDepierre from '@/public/images/Work/ConsultorioDepierre.jpg';
+import ExiBit from '@/public/images/Work/ExiBit.png';
 import { LanguageStateType } from '@/types/LanguageType';
 
 const WorkList = ({ language }: { language: LanguageStateType }) => {
@@ -39,6 +40,15 @@ const WorkList = ({ language }: { language: LanguageStateType }) => {
       },
       IMG: CarniceriasManzo.src,
       href: 'https://www.carniceriasmanzo.com.ar/',
+    },
+    {
+      title: 'ExiBit',
+      description: {
+        English: `<strong>ExiBit</strong> is an application that provides digital signage and invoicing services.<br/> Upload your products and update your digital billboards in real time from the app.`,
+        Español: `<strong>ExiBit</strong> es una aplicación que ofrece servicios de cartelería digital y facturación.<br/> Carga tus productos, y actualiza tus carteleras digitales en tiempo real desde la App.`,
+      },
+      IMG: ExiBit.src,
+      href: 'https://www.exibit.com.ar/',
     },
   ];
 
