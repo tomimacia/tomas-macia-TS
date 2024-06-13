@@ -53,19 +53,19 @@ const Layout = ({ children }: MainLayoutType) => {
           rel='apple-touch-icon'
         />
         <link rel='icon' href={HeaderLogo.src} />
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
-        />
-        <Script id='google-analytics'>
-          {`
+      </Head>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+      />
+      <Script id='google-analytics'>
+        {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
  
           gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
         `}
-        </Script>
-      </Head>
+      </Script>
       <Navigation />
       <Container
         overflow='hidden'
