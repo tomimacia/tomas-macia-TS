@@ -30,7 +30,7 @@ const WorkList = ({ language }: { language: LanguageStateType }) => {
             `,
       },
       IMG: EspacioSanMartinIMG.src,
-      href: 'https://www.sanmartinjuancruz.com.ar/',
+      href: 'https://espacio-san-martin.vercel.app/',
     },
     {
       title: 'Carnicerías Manzo',
