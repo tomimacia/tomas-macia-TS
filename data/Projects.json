@@ -3,20 +3,6 @@
     "Title": "Some of my projects:",
     "ProjectCardsData": [
       {
-        "alt": "tuithub-news-website",
-        "title": "TuitHub Trending News",
-        "description": "Twitter trending news website. It uses a backend that scraps the current twitter trends, gets the most recent news urls from google (on its location zone), grabs the article and rewrites it entirely with AI. The backend is built on node.js with puppeteer, and the front-end with Next JS and Chakra UI",
-        "source": {
-          "href": "private",
-          "button": "Private source"
-        },
-        "site": {
-          "href": "https://www.tuithub.com/",
-          "button": "Visit site"
-        },
-        "tecs": ["Next.js", "ChakraUI", "Framer Motion", "Puppeteer"]
-      },
-      {
         "alt": "radiotracker-pinar-website",
         "title": "RadioTracker APRS",
         "description": "Geolocation and weather site powered by APRS. Built with Chakra UI and Next JS, consuming APRS Api",
