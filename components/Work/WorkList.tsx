@@ -1,7 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
 import WorkCard from './WorkCard';
-import EspacioSanMartinIMG from '@/public/images/Work/EspacioSanMartin.jpg';
 import CarniceriasManzo from '@/public/images/Work/CarnieceriasManzo.png';
 import ConsultorioDepierre from '@/public/images/Work/ConsultorioDepierre.jpg';
 import ExiBit from '@/public/images/Work/ExiBit.png';
@@ -20,17 +19,6 @@ const WorkList = ({ language }: { language: LanguageStateType }) => {
       },
       IMG: ConsultorioDepierre.src,
       href: 'https://www.consultoriodrdepierre.com.ar/',
-    },
-    {
-      title: 'Espacio San Martín',
-      description: {
-        English: `<strong>Espacio San Martín</strong> is a center dedicated to the education and support of the community. They offer courses, free legal advice, and enriching activities to promote the personal and professional development of their neighbors.
-            `,
-        Español: `<strong>Espacio San Martín</strong> es un centro que se dedica a la formación y apoyo de la comunidad.<br/> Ofrecen cursos, asesoría legal gratuita y actividades enriquecedoras para promover el desarrollo personal y profesional de sus vecinos.
-            `,
-      },
-      IMG: EspacioSanMartinIMG.src,
-      href: 'https://espacio-san-martin.vercel.app/',
     },
     {
       title: 'Carnicerías Manzo',
