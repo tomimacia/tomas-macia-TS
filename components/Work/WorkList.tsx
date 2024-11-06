@@ -4,6 +4,7 @@ import WorkCard from './WorkCard';
 import CarniceriasManzo from '@/public/images/Work/CarnieceriasManzo.png';
 import ConsultorioDepierre from '@/public/images/Work/ConsultorioDepierre.jpg';
 import ExiBit from '@/public/images/Work/ExiBit.png';
+import GSMapas from '@/public/images/Work/GSMapasLogo.png';
 import { LanguageStateType } from '@/types/LanguageType';
 
 const WorkList = ({ language }: { language: LanguageStateType }) => {
@@ -37,6 +38,15 @@ const WorkList = ({ language }: { language: LanguageStateType }) => {
       },
       IMG: ExiBit.src,
       href: 'https://www.exibit.com.ar/',
+    },
+    {
+      title: 'GS Mapas',
+      description: {
+        English: `<strong>GS Mapas</strong> is a real estate company with an interactive map, displaying all available properties for easy exploration and viewing. Find your next property with ease on <strong>GS Mapas</strong>.`,
+        Español: `<strong>GS Mapas</strong> es una inmobiliaria con un mapa interactivo que muestra todas las propiedades disponibles para facilitar la exploración y visualización. Encuentra tu próxima propiedad fácilmente en <strong>GS Mapas</strong>.`,
+      },
+      IMG: GSMapas.src,
+      href: 'https://www.gsmapas.com/',
     },
   ];
 
