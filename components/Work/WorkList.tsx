@@ -46,7 +46,7 @@ const WorkList = ({ language }: { language: LanguageStateType }) => {
         Español: `<strong>GS Mapas</strong> es una inmobiliaria con un mapa interactivo que muestra todas las propiedades disponibles para facilitar la exploración y visualización. Encuentra tu próxima propiedad fácilmente en <strong>GS Mapas</strong>.`,
       },
       IMG: GSMapas.src,
-      href: 'https://www.gsmapas.com/',
+      href: 'https://www.gsmapas.com.ar/',
     },
   ];
 
