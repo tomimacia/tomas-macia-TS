@@ -1,10 +1,11 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
 import WorkCard from './WorkCard';
-import EspacioSanMartinIMG from '@/public/images/Work/EspacioSanMartin.jpg';
 import CarniceriasManzo from '@/public/images/Work/CarnieceriasManzo.png';
 import ConsultorioDepierre from '@/public/images/Work/ConsultorioDepierre.jpg';
 import ExiBit from '@/public/images/Work/ExiBit.png';
+import GSMapas from '@/public/images/Work/GSMapasLogo.png';
+import Abrond from '@/public/images/Work/Abrond.png';
 import { LanguageStateType } from '@/types/LanguageType';
 
 const WorkList = ({ language }: { language: LanguageStateType }) => {
@@ -20,17 +21,6 @@ const WorkList = ({ language }: { language: LanguageStateType }) => {
       },
       IMG: ConsultorioDepierre.src,
       href: 'https://www.consultoriodrdepierre.com.ar/',
-    },
-    {
-      title: 'Espacio San Martín',
-      description: {
-        English: `<strong>Espacio San Martín</strong> is a center dedicated to the education and support of the community. They offer courses, free legal advice, and enriching activities to promote the personal and professional development of their neighbors.
-            `,
-        Español: `<strong>Espacio San Martín</strong> es un centro que se dedica a la formación y apoyo de la comunidad.<br/> Ofrecen cursos, asesoría legal gratuita y actividades enriquecedoras para promover el desarrollo personal y profesional de sus vecinos.
-            `,
-      },
-      IMG: EspacioSanMartinIMG.src,
-      href: 'https://espacio-san-martin.vercel.app/',
     },
     {
       title: 'Carnicerías Manzo',
@@ -49,6 +39,24 @@ const WorkList = ({ language }: { language: LanguageStateType }) => {
       },
       IMG: ExiBit.src,
       href: 'https://www.exibit.com.ar/',
+    },
+    {
+      title: 'GS Mapas',
+      description: {
+        English: `<strong>GS Mapas</strong> is a real estate company with an interactive map, displaying all available properties for easy exploration and viewing. Find your next property with ease on <strong>GS Mapas</strong>.`,
+        Español: `<strong>GS Mapas</strong> es una inmobiliaria con un mapa interactivo que muestra todas las propiedades disponibles para facilitar la exploración y visualización. Encuentra tu próxima propiedad fácilmente en <strong>GS Mapas</strong>.`,
+      },
+      IMG: GSMapas.src,
+      href: 'https://www.gsmapas.com.ar/',
+    },
+    {
+      title: 'Abrond',
+      description: {
+        English: `<strong>Abrond</strong> is a family business established in 1978, offering high-quality doorbells and transformers. With over 46 years of experience, Abrond products are ideal for homes, schools, and factories, combining reliability and durability.`,
+        Español: `<strong>Abrond</strong> es una empresa familiar fundada en 1978, que ofrece timbres y transformadores de alta calidad. Con más de 46 años de experiencia, los productos Abrond son ideales para hogares, escuelas y fábricas, combinando fiabilidad y durabilidad.`,
+      },
+      IMG: Abrond.src,
+      href: 'https://www.abrond.com.ar/',
     },
   ];
 
