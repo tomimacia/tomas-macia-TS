@@ -5,6 +5,7 @@ import CarniceriasManzo from '@/public/images/Work/CarnieceriasManzo.png';
 import ConsultorioDepierre from '@/public/images/Work/ConsultorioDepierre.jpg';
 import ExiBit from '@/public/images/Work/ExiBit.png';
 import GSMapas from '@/public/images/Work/GSMapasLogo.png';
+import Abrond from '@/public/images/Work/Abrond.png';
 import { LanguageStateType } from '@/types/LanguageType';
 
 const WorkList = ({ language }: { language: LanguageStateType }) => {
@@ -47,6 +48,15 @@ const WorkList = ({ language }: { language: LanguageStateType }) => {
       },
       IMG: GSMapas.src,
       href: 'https://www.gsmapas.com.ar/',
+    },
+    {
+      title: 'Abrond',
+      description: {
+        English: `<strong>Abrond</strong> is a family business established in 1978, offering high-quality doorbells and transformers. With over 46 years of experience, Abrond products are ideal for homes, schools, and factories, combining reliability and durability.`,
+        Español: `<strong>Abrond</strong> es una empresa familiar fundada en 1978, que ofrece timbres y transformadores de alta calidad. Con más de 46 años de experiencia, los productos Abrond son ideales para hogares, escuelas y fábricas, combinando fiabilidad y durabilidad.`,
+      },
+      IMG: Abrond.src,
+      href: 'https://www.abrond.com.ar/',
     },
   ];
 
