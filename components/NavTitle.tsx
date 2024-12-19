@@ -2,6 +2,7 @@ import { Box, Container, Flex, Heading, Image, Text } from '@chakra-ui/react';
 import NavProfileImage from '../public/images/ProfileImages/NavProfileImage.jpg';
 import { SocialMedia } from './LayoutComps/SocialMedia';
 const NavTitle = () => {
+  //
   return (
     <Container mt={5} p={3}>
       <Flex justify='space-between'>
