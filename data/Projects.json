@@ -1,6 +1,6 @@
 {
   "English": {
-    "Title": "Some of my projects:",
+    "Title": "My Early Projects:",
     "ProjectCardsData": [
       {
         "alt": "radiotracker-pinar-website",
@@ -47,22 +47,8 @@
     ]
   },
   "Español": {
-    "Title": "Algunos de mis proyectos:",
+    "Title": "Mis primeros proyectos:",
     "ProjectCardsData": [
-      {
-        "alt": "tuithub-news-website",
-        "title": "TuitHub Trending News",
-        "description": "Página web de noticias de tendencias en Twitter. Utiliza un backend que extrae las tendencias actuales de Twitter, obtiene las URL de noticias más recientes de Google (en su zona de ubicación), captura el artículo y lo reescribe completamente con inteligencia artificial. El backend está desarrollado con Node.js y Puppeteer, y el frontend con Next.js y Chakra UI.",
-        "source": {
-          "href": "private",
-          "button": "Fuente privada"
-        },
-        "site": {
-          "href": "https://www.tuithub.com/",
-          "button": "Ir al sitio"
-        },
-        "tecs": ["Next.js", "ChakraUI", "Framer Motion", "Puppeteer"]
-      },
       {
         "alt": "radiotracker-pinar-website",
         "title": "RadioTracker APRS",
