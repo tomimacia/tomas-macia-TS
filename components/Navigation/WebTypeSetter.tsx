@@ -31,7 +31,7 @@ const WebTypeSetter = () => {
   };
   const titleText = {
     Español: 'Estilo de Web',
-    English: 'Websit Style',
+    English: 'Website Style',
   };
   return (
     <>
