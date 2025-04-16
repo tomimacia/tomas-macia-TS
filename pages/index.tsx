@@ -13,6 +13,7 @@ export default function Home() {
     (new Date().getMonth() === 8 && new Date().getDate() < 15)
       ? 1
       : 0);
+  console.log(edad);
   return (
     <Layout pageTitle={data?.Heading} headTitle='Portfolio'>
       <Flex
