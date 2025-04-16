@@ -6,6 +6,7 @@ import { LanguageSwitch } from './Navigation/LanguageSwitch';
 import { MobileNavigation } from './Navigation/MobileNavigation';
 import { NavigationDataType } from '@/types/Datatype';
 import { NavigationContainer } from './Containers';
+import WebTypeSetter from './Navigation/WebTypeSetter';
 const Navigation = () => {
   const data: NavigationDataType = useJsonData(NavLinks);
 
@@ -24,7 +25,7 @@ const Navigation = () => {
     >
       <NavigationContainer>
         <LanguageSwitch />
-
+        <WebTypeSetter isMobile />
         <BaseNavigation data={data} />
         <MobileNavigation data={data} />
       </NavigationContainer>

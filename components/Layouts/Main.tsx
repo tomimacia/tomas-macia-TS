@@ -74,7 +74,7 @@ const Layout = ({ children }: MainLayoutType) => {
           gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
         `}
       </Script>
-      <WebTypeSetter />
+      <WebTypeSetter isMobile={false} />
       <Navigation />
       <MainContainer>
         <NavTitle />

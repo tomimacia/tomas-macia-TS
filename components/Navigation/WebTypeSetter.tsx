@@ -11,12 +11,12 @@ import {
   DrawerOverlay,
   Flex,
   Text,
-  useColorModeValue,
+  useBreakpointValue,
   useDisclosure,
 } from '@chakra-ui/react';
 import { AnimatePresence, motion } from 'framer-motion';
 
-const WebTypeSetter = () => {
+const WebTypeSetter = ({ isMobile }: { isMobile: boolean }) => {
   const { font } = useGetFont();
   const webType = useWebType();
   const setWebType = useSetWebType();
@@ -32,6 +32,8 @@ const WebTypeSetter = () => {
     Español: 'Estilo de Web',
     English: 'Website Style',
   };
+  const mobileDisplay = useBreakpointValue([true, false, false, false]);
+  if (isMobile !== mobileDisplay) return <></>;
   return (
     <>
       <Button
@@ -41,10 +43,10 @@ const WebTypeSetter = () => {
         position='absolute'
         bg='blackAlpha.200'
         _hover={{ opacity: 0.75 }}
-        top='60px'
+        top={isMobile ? '0px' : '60px'}
         size='md'
         border='1px solid gray'
-        left='50%'
+        left={isMobile ? '40%' : '50%'}
         fontFamily={font}
       >
         <Flex flexDir='column'>
