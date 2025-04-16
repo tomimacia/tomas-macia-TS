@@ -3,6 +3,8 @@ import { Flex, Heading, useBreakpointValue } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useLanguage } from '../context/languageContext';
+import { useWebType } from '@/context/webTypeContext';
+import useGetFont from '@/hooks/useGetFont';
 
 const DisplayLogos = ({
   logos,
@@ -10,12 +12,13 @@ const DisplayLogos = ({
   spanishTitle,
   startingTime = 0,
 }: DisplayLogosType) => {
+  const { font } = useGetFont();
   const sizeValue = useBreakpointValue([45, 50, 50, 59]);
   const language = useLanguage();
+  const webType = useWebType();
   return (
     <Flex
       borderRadius='10px'
-      bg='blackAlpha.200'
       p={3}
       mt={[6, 8, 9, 10]}
       gap={[3, 4, 5, 5]}
@@ -24,9 +27,11 @@ const DisplayLogos = ({
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: startingTime * 0.1 }}
+        transition={{
+          delay: webType === 'Modern' ? startingTime * 0.1 : undefined,
+        }}
       >
-        <Heading fontFamily='mono'>
+        <Heading fontFamily={font} size='lg'>
           {language === 'English' ? englishTitle : spanishTitle}
         </Heading>
       </motion.div>
@@ -37,7 +42,13 @@ const DisplayLogos = ({
               key={i}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: (i + startingTime + 1) * 0.1, duration: 1 }}
+              transition={{
+                delay:
+                  webType === 'Modern'
+                    ? (i + startingTime + 1) * 0.1
+                    : undefined,
+                duration: 1,
+              }}
             >
               <Flex justifyContent='center' alignItems='center' h='100%'>
                 <Image

@@ -1,7 +1,9 @@
-import { LinkItemType } from "@/types/LinkTypes";
-import { Link, useColorModeValue } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import NextLink from "next/link";
+import { useWebType } from '@/context/webTypeContext';
+import useGetFont from '@/hooks/useGetFont';
+import { LinkItemType } from '@/types/LinkTypes';
+import { Link, useColorModeValue } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import NextLink from 'next/link';
 
 export const LinkItem = ({
   href,
@@ -9,7 +11,13 @@ export const LinkItem = ({
   children,
   ...props
 }: LinkItemType) => {
-  const inactiveColor = useColorModeValue("gray.800", "whiteAlpha.900");
+  const { font } = useGetFont();
+  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900');
+  const webType = useWebType();
+  const hovers = {
+    Modern: { scale: 1.05 },
+    Minimalist: { textDecoration: 'underline' },
+  };
 
   return (
     <Link
@@ -19,10 +27,11 @@ export const LinkItem = ({
       p={1}
       color={inactiveColor}
       target={target}
-      borderRadius="5px"
+      borderRadius='5px'
       {...props}
+      fontFamily={font}
     >
-      <motion.button whileHover={{ scale: 1.05 }}>{children}</motion.button>
+      <motion.button whileHover={hovers[webType]}>{children}</motion.button>
     </Link>
   );
 };

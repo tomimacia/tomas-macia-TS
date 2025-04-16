@@ -1,17 +1,17 @@
+import { ProjectsContainer } from '@/components/Containers';
 import { FullProjectType, ProjectsDataType } from '@/types/ProjectsTypes';
+import { motion } from 'framer-motion';
 import Layout from '../components/Layouts/Article';
 import ProjectsCard from '../components/Projects/ProjectsCard';
 import { MainImages, ModalImages } from '../data/ProjectImages';
 import ProjectsJson from '../data/Projects.json';
 import useJsonData from '../hooks/useJsonData';
-import { motion } from 'framer-motion';
-import { Flex } from '@chakra-ui/react';
 const Projects = () => {
   const data: ProjectsDataType = useJsonData(ProjectsJson);
 
   return (
     <Layout headTitle='Projects' pageTitle={data.Title}>
-      <Flex key={data.Title} flexDir='column'>
+      <ProjectsContainer key={data.Title} title={data.Title || ""}>
         {data.ProjectCardsData?.map((project: FullProjectType, i: number) => {
           return (
             <motion.div
@@ -28,7 +28,7 @@ const Projects = () => {
             </motion.div>
           );
         })}
-      </Flex>
+      </ProjectsContainer>
     </Layout>
   );
 };

@@ -1,12 +1,17 @@
-import { Box, Container, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import useGetFont from '@/hooks/useGetFont';
+import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
 import NavProfileImage from '../public/images/ProfileImages/NavProfileImage.jpg';
+import { NavTitleContainer } from './Containers';
 import { SocialMedia } from './LayoutComps/SocialMedia';
 const NavTitle = () => {
+  const { font } = useGetFont();
   return (
-    <Container mt={5} p={3}>
+    <NavTitleContainer>
       <Flex justify='space-between'>
-        <Box>
-          <Heading w='100%'>Tomás Macía</Heading>
+        <Box fontFamily={font}>
+          <Heading fontFamily={font} w='100%'>
+            Tomás Macía
+          </Heading>
           <Text w='100%' fontSize='lg' fontWeight='bold'>
             React & Next JS developer
           </Text>
@@ -19,7 +24,7 @@ const NavTitle = () => {
         />
       </Flex>
       <SocialMedia />
-    </Container>
+    </NavTitleContainer>
   );
 };
 

@@ -1,5 +1,5 @@
 import { Flex } from '@chakra-ui/react';
-import React from 'react';
+import React, { Fragment } from 'react';
 import WorkCard from './WorkCard';
 import CarniceriasManzo from '@/public/images/Work/CarnieceriasManzo.png';
 import ConsultorioDepierre from '@/public/images/Work/ConsultorioDepierre.jpg';
@@ -7,8 +7,12 @@ import ExiBit from '@/public/images/Work/ExiBit.png';
 import GSMapas from '@/public/images/Work/GSMapasLogo.png';
 import Abrond from '@/public/images/Work/Abrond.png';
 import { LanguageStateType } from '@/types/LanguageType';
+import MinimalWorkCard from './MinimalistWorkCard';
+import { useWebType } from '@/context/webTypeContext';
+import useGetFont from '@/hooks/useGetFont';
 
 const WorkList = ({ language }: { language: LanguageStateType }) => {
+  const { font } = useGetFont();
   const WorkList = [
     {
       title: 'Consultorio Depierre',
@@ -21,6 +25,10 @@ const WorkList = ({ language }: { language: LanguageStateType }) => {
       },
       IMG: ConsultorioDepierre.src,
       href: 'https://www.consultoriodrdepierre.com.ar/',
+      subTitle: {
+        English: 'Medical Office',
+        Español: 'Consultorio Médico',
+      },
     },
     {
       title: 'Carnicerías Manzo',
@@ -30,6 +38,10 @@ const WorkList = ({ language }: { language: LanguageStateType }) => {
       },
       IMG: CarniceriasManzo.src,
       href: 'https://www.carniceriasmanzo.com.ar/',
+      subTitle: {
+        English: 'Meat shop',
+        Español: 'Carnicería',
+      },
     },
     {
       title: 'ExiBit',
@@ -39,6 +51,10 @@ const WorkList = ({ language }: { language: LanguageStateType }) => {
       },
       IMG: ExiBit.src,
       href: 'https://www.exibit.com.ar/',
+      subTitle: {
+        English: 'Digital Signage',
+        Español: 'Cartelería Digital',
+      },
     },
     {
       title: 'GS Mapas',
@@ -48,6 +64,10 @@ const WorkList = ({ language }: { language: LanguageStateType }) => {
       },
       IMG: GSMapas.src,
       href: 'https://www.gsmapas.com.ar/',
+      subTitle: {
+        English: 'Real State',
+        Español: 'Inmobiliaria',
+      },
     },
     {
       title: 'Abrond',
@@ -57,22 +77,35 @@ const WorkList = ({ language }: { language: LanguageStateType }) => {
       },
       IMG: Abrond.src,
       href: 'https://www.abrond.com.ar/',
+      subTitle: {
+        English: 'Doorbell Factory',
+        Español: 'Fábrica de Timbres',
+      },
     },
   ];
-
+  const webType = useWebType();
   return (
-    <Flex gap={5} p={[1, 1, 2, 2]} flexDir='column'>
+    <Flex fontFamily={font} gap={2} p={[1, 1, 2, 2]} flexDir='column'>
       {WorkList.map((item) => {
-        const { title, description, IMG, href } = item;
+        const { title, description, subTitle, IMG, href } = item;
         return (
-          <WorkCard
-            key={`word-card-key-${title}`}
-            title={title}
-            description={description[language]}
-            IMG={IMG}
-            href={href}
-            buttonText={language === 'Español' ? 'Visitar' : 'Visit site'}
-          />
+          <Fragment key={`word-${webType}-card-key-${title}`}>
+            {webType === 'Modern' && (
+              <WorkCard
+                title={title}
+                description={description[language]}
+                IMG={IMG}
+                href={href}
+              />
+            )}
+            {webType === 'Minimalist' && (
+              <MinimalWorkCard
+                title={title}
+                subTitle={subTitle[language]}
+                href={href}
+              />
+            )}
+          </Fragment>
         );
       })}
     </Flex>

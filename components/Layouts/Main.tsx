@@ -7,15 +7,23 @@ import Footer from '../Footer';
 import NavTitle from '../NavTitle';
 import Navigation from '../Navigation';
 import Script from 'next/script';
+import WebTypeSetter from '../Navigation/WebTypeSetter';
+import { useWebType } from '@/context/webTypeContext';
+import { MainContainer } from '../Containers';
 type MainLayoutType = {
   children: ReactNode;
 };
 const Layout = ({ children }: MainLayoutType) => {
+  const webType = useWebType();
+  const colors = {
+    Modern: { light: '#D6CEAE', dark: 'gray.800' },
+    Minimalist: { light: 'white', dark: 'gray.900' },
+  };
   return (
     <Box
       pos='relative'
       minH='100vh'
-      bg={useColorModeValue('#D6CEAE', 'gray.800')}
+      bg={useColorModeValue(colors[webType].light, colors[webType].dark)}
       h='100%'
       as='main'
       pl={{ xl: 'calc(100vw - 100%)' }}
@@ -66,19 +74,23 @@ const Layout = ({ children }: MainLayoutType) => {
           gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
         `}
       </Script>
+      <WebTypeSetter />
       <Navigation />
-      <Container
-        overflow='hidden'
-        h='100%'
-        pb='4rem'
-        pt='35px'
-        maxW='container.md'
-      >
+      <MainContainer>
         <NavTitle />
-        <Divider maxW='90%' m='auto' mb={6} mt={5} orientation='horizontal' />
+
+        <Divider
+          borderColor={webType !== 'Modern' ? 'transparent' : 'gray'}
+          maxW='90%'
+          m='auto'
+          mb={5}
+          mt={2}
+          orientation='horizontal'
+        />
+
         {children}
         <Analytics />
-      </Container>
+      </MainContainer>
       <Footer />
     </Box>
   );
