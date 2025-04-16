@@ -23,7 +23,6 @@ const WebTypeSetter = () => {
   const webStyles: WebType[] = ['Modern', 'Minimalist'];
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const color = useColorModeValue('blackAlpha.600', 'whiteAlpha.800');
   const language = useLanguage();
   const buttonText = {
     Español: 'Estilo',
@@ -38,13 +37,13 @@ const WebTypeSetter = () => {
       <Button
         borderBottomRadius={30}
         zIndex={1000}
-        colorScheme='blue'
         onClick={onOpen}
         position='absolute'
-        bg={color}
+        bg='blackAlpha.200'
         _hover={{ opacity: 0.75 }}
         top='60px'
         size='md'
+        border='1px solid gray'
         left='50%'
         fontFamily={font}
       >

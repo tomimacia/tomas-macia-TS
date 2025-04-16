@@ -17,7 +17,7 @@ const Layout = ({ children }: MainLayoutType) => {
   const webType = useWebType();
   const colors = {
     Modern: { light: '#D6CEAE', dark: 'gray.800' },
-    Minimalist: { light: 'white', dark: 'gray.900' },
+    Minimalist: { light: '#ebe8df', dark: 'gray.900' },
   };
   return (
     <Box
